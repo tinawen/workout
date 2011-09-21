@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @log_entry.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @log_entry.date %>
+</p>
+
+<p>
+  <b>Exercise:</b>
+  <%= @log_entry.exercise %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @log_entry.duration %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @log_entry.comment %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @log_entry.points %>
+</p>
+
+
+<%= link_to 'Edit', edit_log_entry_path(@log_entry) %> |
+<%= link_to 'Back', log_entries_path %>
