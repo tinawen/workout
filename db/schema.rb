@@ -10,15 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110921023534) do
+ActiveRecord::Schema.define(:version => 20110921025813) do
 
   create_table "log_entries", :force => true do |t|
-    t.string   "name"
+    t.integer  "member_id"
     t.date     "date"
     t.string   "exercise"
     t.float    "duration"
     t.string   "comment"
     t.float    "points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "members", :force => true do |t|
+    t.string   "name"
+    t.integer  "team_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

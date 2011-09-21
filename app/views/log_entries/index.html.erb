@@ -1,8 +1,11 @@
-<h1>Listing log_entries</h1>
 
+
+<% @log_entries.each do |team, entries| %>
+
+<h1>Team name: <%= team.name %></h1>
 <table>
   <tr>
-    <th>Name</th>
+    <th>Member</th>
     <th>Date</th>
     <th>Exercise</th>
     <th>Duration</th>
@@ -13,9 +16,10 @@
     <th></th>
   </tr>
 
-<% @log_entries.each do |log_entry| %>
+<% entries.each do |log_entry| %>
+
   <tr>
-    <td><%= log_entry.name %></td>
+    <td><%= log_entry.member.name%></td>
     <td><%= log_entry.date %></td>
     <td><%= log_entry.exercise %></td>
     <td><%= log_entry.duration %></td>
@@ -27,7 +31,8 @@
   </tr>
 <% end %>
 </table>
+<% end %>
 
 <br />
 
-<%= link_to 'New Log entry', new_log_entry_path %>
+<%= link_to 'New Work Out', new_log_entry_path %>

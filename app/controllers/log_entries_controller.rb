@@ -2,7 +2,7 @@ class LogEntriesController < ApplicationController
   # GET /log_entries
   # GET /log_entries.json
   def index
-    @log_entries = LogEntry.all
+    @log_entries = LogEntry.all.group_by { |log_entry| log_entry.member.team }
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +25,7 @@ class LogEntriesController < ApplicationController
   # GET /log_entries/new.json
   def new
     @log_entry = LogEntry.new
+    @log_entry.points = 0
 
     respond_to do |format|
       format.html # new.html.erb

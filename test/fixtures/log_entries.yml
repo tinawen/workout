@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  member_id: 1
   date: 2011-09-20
   exercise: MyString
   duration: 1.5
@@ -9,7 +9,7 @@ one:
   points: 1.5
 
 two:
-  name: MyString
+  member_id: 1
   date: 2011-09-20
   exercise: MyString
   duration: 1.5
